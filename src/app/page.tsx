@@ -83,15 +83,15 @@ const FeatureCard = ({
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center bg-background p-4 md:p-6 lg:p-8">
+    <div className="flex flex-1 flex-col items-center justify-center bg-background p-6">
       <div className="container mx-auto max-w-7xl text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
           GeoPulse
         </h1>
         <p className="mx-auto mt-4 max-w-[700px] text-lg text-muted-foreground md:text-xl">
-          Actionable insights at a glance, feel the world&apos;s true pulse.
+          Actionable insights on impulse, feel the world&apos;s true pulse.
         </p>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {features.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}
