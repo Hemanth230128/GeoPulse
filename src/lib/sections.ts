@@ -5,7 +5,7 @@ export const sections = [
     description: "High population density doesn't always equate to poverty - distribution is uneven and often misunderstood.",
     aiHint: 'population poverty',
     href: '/section/1',
-    imgSrc: 'https://placehold.co/600x400/d3d7e1/3e4d70.png',
+    imgSrc: 'https://placehold.co/600x400/9DB17C/FFFFFF.png',
     subsections: [
       { id: 'a', name: 'MPI Comparison' },
       { id: 'b', name: 'Trend Filtering' },
@@ -20,7 +20,7 @@ export const sections = [
     description: "Economic growth alone doesn't eliminate malnutrition - education and basic services are key drivers.",
     aiHint: 'malnutrition chart',
     href: '/section/2',
-    imgSrc: 'https://placehold.co/600x400/c8cdd7/3e4d70.png',
+    imgSrc: 'https://placehold.co/600x400/A9B4C2/FFFFFF.png',
     subsections: [
         { id: 'a', name: 'Indicator Correlation' },
         { id: 'b', name: 'Highlight Malnutrition' },
@@ -34,7 +34,7 @@ export const sections = [
     description: 'Rapid urbanization and limited opportunities drive internal migration and international brain drain.',
     aiHint: 'urbanization migration',
     href: '/section/3',
-    imgSrc: 'https://placehold.co/600x400/bdc3cd/3e4d70.png',
+    imgSrc: 'https://placehold.co/600x400/C7B8A9/FFFFFF.png',
     subsections: [
         { id: 'a', name: 'Migration Analysis' },
         { id: 'b', name: 'Skill Shortage Identification' },
@@ -48,7 +48,7 @@ export const sections = [
     description: 'Currency value is affected by macro factors like inflation, trade balance, and population pressure.',
     aiHint: 'currency chart',
     href: '/section/4',
-    imgSrc: 'https://placehold.co/600x400/b2b9c3/3e4d70.png',
+    imgSrc: 'https://placehold.co/600x400/BDB7AB/FFFFFF.png',
     subsections: [
         { id: 'a', name: 'INR/USD Trend Visualization' },
         { id: 'b', name: 'Regional Currency Comparison' },
@@ -62,7 +62,7 @@ export const sections = [
     description: 'Some Indian regions may face future risks in poverty or malnutrition due to current demographic trends.',
     aiHint: 'risk map',
     href: '/section/5',
-    imgSrc: 'https://placehold.co/600x400/a7afb9/3e4d70.png',
+    imgSrc: 'https://placehold.co/600x400/DDCDBE/FFFFFF.png',
     subsections: [
         { id: 'a', name: 'Composite Risk Score' },
         { id: 'b', name: '2030 Risk Zone Forecast' },
