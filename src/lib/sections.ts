@@ -1,12 +1,32 @@
-export const sections = [
+import type { LucideIcon } from 'lucide-react';
+import {
+  AreaChart,
+  HeartPulse,
+  ArrowRightLeft,
+  TrendingUp,
+  Map,
+} from 'lucide-react';
+
+export type Section = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  Icon: LucideIcon;
+  subsections: {
+    id: string;
+    name: string;
+  }[];
+};
+
+export const sections: Section[] = [
   {
     id: '1',
     title: 'Visualization Task 1',
     description:
       'Analyze the relationship between Population Density and the Poverty Index.',
-    aiHint: 'population poverty',
     href: '/section/1',
-    imgSrc: 'https://placehold.co/600x400/9DB17C/FFFFFF.png',
+    Icon: AreaChart,
     subsections: [
       { id: 'a', name: 'MPI Comparison' },
       { id: 'b', name: 'Trend Filtering' },
@@ -20,9 +40,8 @@ export const sections = [
     title: 'Visualization Task 2',
     description:
       'Explore the correlation between Malnutrition and key development indicators.',
-    aiHint: 'malnutrition chart',
     href: '/section/2',
-    imgSrc: 'https://placehold.co/600x400/A9B4C2/FFFFFF.png',
+    Icon: HeartPulse,
     subsections: [
       { id: 'a', name: 'Indicator Correlation' },
       { id: 'b', name: 'Highlight Malnutrition' },
@@ -35,9 +54,8 @@ export const sections = [
     title: 'Visualization Task 3',
     description:
       'Investigate the impact of Urbanization, Migration, and Brain Drain.',
-    aiHint: 'urbanization migration',
     href: '/section/3',
-    imgSrc: 'https://placehold.co/600x400/C7B8A9/FFFFFF.png',
+    Icon: ArrowRightLeft,
     subsections: [
       { id: 'a', name: 'Migration Analysis' },
       { id: 'b', name: 'Skill Shortage Identification' },
@@ -50,9 +68,8 @@ export const sections = [
     title: 'Visualization Task 4',
     description:
       'Track the relationship between INR Depreciation and Macroeconomic Indicators.',
-    aiHint: 'currency chart',
     href: '/section/4',
-    imgSrc: 'https://placehold.co/600x400/BDB7AB/FFFFFF.png',
+    Icon: TrendingUp,
     subsections: [
       { id: 'a', name: 'INR/USD Trend Visualization' },
       { id: 'b', name: 'Regional Currency Comparison' },
@@ -65,9 +82,8 @@ export const sections = [
     title: 'Visualization Task 5',
     description:
       'Develop a Predictive Risk Map for key socio-economic challenges.',
-    aiHint: 'risk map',
     href: '/section/5',
-    imgSrc: 'https://placehold.co/600x400/DDCDBE/FFFFFF.png',
+    Icon: Map,
     subsections: [
       { id: 'a', name: 'Composite Risk Score' },
       { id: 'b', name: '2030 Risk Zone Forecast' },
@@ -78,11 +94,13 @@ export const sections = [
 ];
 
 export function getSectionData(sectionId: string) {
-    return sections.find(section => section.id === sectionId);
+  return sections.find((section) => section.id === sectionId);
 }
 
 export function getSubsectionData(sectionId: string, subsectionId: string) {
-    const section = getSectionData(sectionId);
-    if (!section) return undefined;
-    return section.subsections.find(subsection => subsection.id === subsectionId);
+  const section = getSectionData(sectionId);
+  if (!section) return undefined;
+  return section.subsections.find(
+    (subsection) => subsection.id === subsectionId
+  );
 }

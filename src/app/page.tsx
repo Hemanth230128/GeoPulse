@@ -1,36 +1,25 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { sections } from '@/lib/sections';
+import { sections, type Section } from '@/lib/sections';
 
 const FeatureCard = ({
   feature,
 }: {
-  feature: (typeof sections)[0];
+  feature: Section;
 }) => (
   <Link href={feature.href} key={feature.id} className="group block h-full">
-    <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl">
-      <CardContent className="p-0">
-        <Image
-          src={feature.imgSrc}
-          alt={feature.title}
-          width={600}
-          height={400}
-          className="aspect-video w-full object-cover"
-          data-ai-hint={feature.aiHint}
-        />
-      </CardContent>
+    <Card className="flex h-full flex-col justify-center overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold tracking-tight text-primary">
-          {feature.title}
+        <CardTitle className="flex items-center gap-3 text-lg font-semibold tracking-tight text-primary">
+          <feature.Icon className="h-8 w-8 shrink-0" />
+          <span className="flex-1">{feature.title}</span>
         </CardTitle>
-        <CardDescription className="text-sm text-muted-foreground">
+        <CardDescription className="pt-2 text-sm text-muted-foreground">
           {feature.description}
         </CardDescription>
       </CardHeader>
@@ -41,7 +30,7 @@ const FeatureCard = ({
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center justify-center bg-background">
-      <div className="container mx-auto w-full max-w-6xl px-4 text-center">
+      <div className="container mx-auto w-full max-w-6xl px-4 text-center sm:px-6 lg:px-8">
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
           GeoPulse
         </h1>
