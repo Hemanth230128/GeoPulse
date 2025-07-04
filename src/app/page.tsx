@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {
   Card,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -13,16 +14,18 @@ const FeatureCard = ({
   feature: Section;
 }) => (
   <Link href={feature.href} key={feature.id} className="group block h-full">
-    <Card className="flex h-full flex-col justify-center overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl">
+    <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl">
       <CardHeader>
-        <CardTitle className="flex items-center gap-3 text-lg font-semibold tracking-tight text-primary">
-          <feature.Icon className="h-8 w-8 shrink-0" />
-          <span className="flex-1">{feature.title}</span>
+        <CardTitle className="text-lg font-semibold tracking-tight text-primary">
+          {feature.title}
         </CardTitle>
         <CardDescription className="pt-2 text-sm text-muted-foreground">
           {feature.description}
         </CardDescription>
       </CardHeader>
+      <CardContent className="flex flex-1 items-center justify-center p-6">
+        <feature.Icon className="h-16 w-16 text-muted-foreground/50 transition-all group-hover:scale-110 group-hover:text-muted-foreground" />
+      </CardContent>
     </Card>
   </Link>
 );
