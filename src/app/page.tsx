@@ -40,8 +40,8 @@ const FeatureCard = ({
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center bg-background p-6">
-      <div className="container mx-auto max-w-7xl text-center">
+    <div className="flex flex-1 flex-col items-center justify-center bg-background">
+      <div className="container mx-auto w-full max-w-6xl px-4 text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
           GeoPulse
         </h1>
