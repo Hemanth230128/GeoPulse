@@ -11,21 +11,23 @@ import {
 } from '@/components/ui/sidebar';
 import { cn } from '@/lib/utils';
 import { Separator } from './ui/separator';
-
-const subsections = [
-  { id: 'a', name: 'Subsection A' },
-  { id: 'b', name: 'Subsection B' },
-  { id: 'c', name: 'Subsection C' },
-];
+import { getSectionData } from '@/lib/sections';
 
 export function SidebarNav({ sectionId }: { sectionId: string }) {
   const pathname = usePathname();
+  const section = getSectionData(sectionId);
+
+  if (!section) {
+    return null;
+  }
+
+  const { title, subsections } = section;
 
   return (
     <div className="flex flex-col h-full">
       <SidebarHeader>
         <h2 className="text-xl font-semibold text-sidebar-foreground">
-          Section {sectionId}
+          {title}
         </h2>
         <Separator className="my-2 bg-sidebar-border" />
       </SidebarHeader>

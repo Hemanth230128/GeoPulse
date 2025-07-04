@@ -1,14 +1,18 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
+import { getSectionData } from '@/lib/sections';
 
 export default function SectionPage({ params }: { params: { sectionId: string } }) {
+  const section = getSectionData(params.sectionId);
+  const sectionTitle = section ? section.title : `Section ${params.sectionId}`;
+
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-200px)]">
         <Card className="w-full max-w-md">
             <CardHeader>
-                <CardTitle className="text-3xl font-bold">Section {params.sectionId}</CardTitle>
+                <CardTitle className="text-3xl font-bold">{sectionTitle}</CardTitle>
                 <CardDescription>
-                    Welcome to Section {params.sectionId}.
+                    Welcome to {sectionTitle}.
                 </CardDescription>
             </CardHeader>
             <CardContent>

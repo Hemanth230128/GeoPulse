@@ -7,6 +7,7 @@ import {
 import { SidebarNav } from '@/components/sidebar-nav';
 import { Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import { getSectionData } from '@/lib/sections';
 
 export default function SectionLayout({
   children,
@@ -15,6 +16,9 @@ export default function SectionLayout({
   children: React.ReactNode;
   params: { sectionId: string };
 }) {
+  const section = getSectionData(params.sectionId);
+  const sectionTitle = section ? section.title : `Section ${params.sectionId}`;
+
   return (
     <SidebarProvider>
       <div className="flex h-full">
@@ -29,7 +33,7 @@ export default function SectionLayout({
                 <Home className="h-4 w-4" />
               </Link>
               <ChevronRight className="h-4 w-4" />
-              <span>Section {params.sectionId}</span>
+              <span>{sectionTitle}</span>
             </div>
           </header>
           <div className="p-4 sm:p-6">{children}</div>

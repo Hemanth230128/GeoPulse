@@ -3,12 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-
-const sections = Array.from({ length: 5 }, (_, i) => ({
-  id: i + 1,
-  name: `Section ${i + 1}`,
-  href: `/section/${i + 1}`,
-}));
+import { sections } from '@/lib/sections';
 
 export function MainNav({ mobile = false }: { mobile?: boolean }) {
   const pathname = usePathname();
@@ -34,7 +29,7 @@ export function MainNav({ mobile = false }: { mobile?: boolean }) {
             mobile ? 'text-lg' : 'text-sm'
           )}
         >
-          {section.name}
+          {section.title}
         </Link>
       ))}
     </div>
