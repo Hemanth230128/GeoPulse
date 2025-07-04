@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MountainIcon } from 'lucide-react';
+import { MountainIcon, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Header() {
@@ -10,7 +10,10 @@ export function Header() {
         <span className="text-lg">GeoPulse</span>
       </Link>
       <nav>
-        <Button variant="outline">Get Started</Button>
+        <Button variant="ghost" size="icon">
+          <User className="h-5 w-5" />
+          <span className="sr-only">User Profile</span>
+        </Button>
       </nav>
     </header>
   );
