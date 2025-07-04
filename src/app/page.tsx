@@ -54,12 +54,10 @@ const features = [
 
 const FeatureCard = ({
   feature,
-  className,
 }: {
   feature: (typeof features)[0];
-  className?: string;
 }) => (
-  <Link href={feature.href} key={feature.id} className={cn('group block', className)}>
+  <Link href={feature.href} key={feature.id} className="group block h-full">
     <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl">
       <CardContent className="p-0">
         <Image
@@ -72,10 +70,10 @@ const FeatureCard = ({
         />
       </CardContent>
       <CardHeader>
-        <CardTitle className="text-xl font-semibold tracking-tight text-primary">
+        <CardTitle className="text-lg font-semibold tracking-tight text-primary">
           {feature.title}
         </CardTitle>
-        <CardDescription className="text-base text-muted-foreground">
+        <CardDescription className="text-sm text-muted-foreground">
           {feature.description}
         </CardDescription>
       </CardHeader>
@@ -85,29 +83,20 @@ const FeatureCard = ({
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col bg-background">
-      <section className="w-full py-20 md:py-32 lg:py-40">
-        <div className="container mx-auto px-4 text-center md:px-6">
-          <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl">
-            GeoPulse
-          </h1>
-          <p className="mx-auto mt-6 max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            Clarity and foresight, feel the world&apos;s true pulse.
-          </p>
+    <div className="flex flex-1 flex-col items-center justify-center bg-background p-4 md:p-6 lg:p-8">
+      <div className="container mx-auto max-w-7xl text-center">
+        <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
+          GeoPulse
+        </h1>
+        <p className="mx-auto mt-4 max-w-[700px] text-lg text-muted-foreground md:text-xl">
+          Actionable insights at a glance, feel the world&apos;s true pulse.
+        </p>
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {features.map((feature) => (
+            <FeatureCard key={feature.id} feature={feature} />
+          ))}
         </div>
-      </section>
-
-      <section className="w-full pb-20 md:pb-32 lg:pb-40">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <FeatureCard feature={features[0]} className="lg:col-span-2" />
-            <FeatureCard feature={features[1]} />
-            <FeatureCard feature={features[2]} />
-            <FeatureCard feature={features[3]} className="lg:col-span-2" />
-            <FeatureCard feature={features[4]} className="lg:col-span-2" />
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
