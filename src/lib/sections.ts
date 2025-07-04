@@ -22,9 +22,9 @@ export type Section = {
 export const sections: Section[] = [
   {
     id: '1',
-    title: 'Visualization Task 1',
+    title: 'Population Density vs. Poverty',
     description:
-      'Analyze the relationship between Population Density and the Poverty Index.',
+      'Compare MPI, filter trends, and explore regions on an interactive map.',
     href: '/section/1',
     Icon: AreaChart,
     subsections: [
@@ -37,9 +37,9 @@ export const sections: Section[] = [
   },
   {
     id: '2',
-    title: 'Visualization Task 2',
+    title: 'Malnutrition & Development',
     description:
-      'Explore the correlation between Malnutrition and key development indicators.',
+      'Correlate indicators, highlight malnutrition, and segment data with various charts.',
     href: '/section/2',
     Icon: HeartPulse,
     subsections: [
@@ -51,9 +51,9 @@ export const sections: Section[] = [
   },
   {
     id: '3',
-    title: 'Visualization Task 3',
+    title: 'Urbanization & Migration',
     description:
-      'Investigate the impact of Urbanization, Migration, and Brain Drain.',
+      'Analyze migration, identify skill shortages, and compare push/pull factors.',
     href: '/section/3',
     Icon: ArrowRightLeft,
     subsections: [
@@ -65,9 +65,9 @@ export const sections: Section[] = [
   },
   {
     id: '4',
-    title: 'Visualization Task 4',
+    title: 'INR Depreciation',
     description:
-      'Track the relationship between INR Depreciation and Macroeconomic Indicators.',
+      'Visualize currency trends, compare regional data, and correlate with economic stress.',
     href: '/section/4',
     Icon: TrendingUp,
     subsections: [
@@ -79,9 +79,9 @@ export const sections: Section[] = [
   },
   {
     id: '5',
-    title: 'Visualization Task 5',
+    title: 'Predictive Risk Map',
     description:
-      'Develop a Predictive Risk Map for key socio-economic challenges.',
+      'Calculate composite risk, forecast future risk zones, and target policy with heatmaps.',
     href: '/section/5',
     Icon: Map,
     subsections: [
