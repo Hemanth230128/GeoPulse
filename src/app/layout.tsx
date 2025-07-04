@@ -4,8 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/header';
 
 export const metadata: Metadata = {
-  title: 'Geopulse Navigator',
-  description: 'A simple website for the Geopulse project.',
+  title: 'GeoPulse',
+  description: 'A simple website for the GeoPulse project.',
 };
 
 export default function RootLayout({
