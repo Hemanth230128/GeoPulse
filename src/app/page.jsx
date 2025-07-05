@@ -12,17 +12,17 @@ const FeatureCard = ({
   feature,
 }) => (
   <Link href={feature.href} key={feature.id} className="group block h-full">
-    <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:shadow-2xl">
-      <CardHeader>
-        <CardTitle className="text-lg font-semibold tracking-tight text-primary">
+    <Card className="flex h-full flex-col overflow-hidden">
+      <CardHeader className="text-center">
+        <CardTitle className="font-semibold tracking-tight text-primary whitespace-pre-line">
           {feature.title}
         </CardTitle>
-        <CardDescription className="text-sm text-muted-foreground pt-2">
+        <CardDescription className="text-sm text-muted-foreground pt-4">
           {feature.description}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 items-center justify-center p-6">
-        <feature.Icon className="h-16 w-16 text-muted-foreground/50 transition-all group-hover:scale-110 group-hover:text-muted-foreground" />
+        <feature.Icon className="h-16 w-16 text-muted-foreground/50" />
       </CardContent>
     </Card>
   </Link>
@@ -37,10 +37,10 @@ export default function Home() {
             GeoPulse
           </h1>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            Actionable insights for a world on the pulse.
+            Actionable insights on impulse, feel the world's true pulse.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {sections.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}
