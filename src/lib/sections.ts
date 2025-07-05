@@ -1,4 +1,3 @@
-import type { LucideIcon } from 'lucide-react';
 import {
   AreaChart,
   HeartPulse,
@@ -7,19 +6,7 @@ import {
   Map,
 } from 'lucide-react';
 
-export type Section = {
-  id: string;
-  title: string;
-  description: string;
-  href: string;
-  Icon: LucideIcon;
-  subsections: {
-    id: string;
-    name: string;
-  }[];
-};
-
-export const sections: Section[] = [
+export const sections = [
   {
     id: '1',
     title: 'Population Density vs. Poverty',
@@ -31,8 +18,6 @@ export const sections: Section[] = [
       { id: 'a', name: 'MPI Comparison' },
       { id: 'b', name: 'Trend Filtering' },
       { id: 'c', name: 'Mismatched Regions' },
-      { id: 'd', name: 'Interactive World Map' },
-      { id: 'e', name: 'Visualization Types' },
     ],
   },
   {
@@ -46,7 +31,6 @@ export const sections: Section[] = [
       { id: 'a', name: 'Indicator Correlation' },
       { id: 'b', name: 'Highlight Malnutrition' },
       { id: 'c', name: 'Granular Segmentation' },
-      { id: 'd', name: 'Chart Visualizations' },
     ],
   },
   {
@@ -60,7 +44,6 @@ export const sections: Section[] = [
       { id: 'a', name: 'Migration Analysis' },
       { id: 'b', name: 'Skill Shortage Identification' },
       { id: 'c', name: 'Push/Pull Factor Comparison' },
-      { id: 'd', name: 'Dynamic Storytelling Charts' },
     ],
   },
   {
@@ -74,7 +57,6 @@ export const sections: Section[] = [
       { id: 'a', name: 'INR/USD Trend Visualization' },
       { id: 'b', name: 'Regional Currency Comparison' },
       { id: 'c', name: 'Economic Stress Correlation' },
-      { id: 'd', name: 'Trend Exploration Charts' },
     ],
   },
   {
@@ -88,16 +70,15 @@ export const sections: Section[] = [
       { id: 'a', name: 'Composite Risk Score' },
       { id: 'b', name: '2030 Risk Zone Forecast' },
       { id: 'c', name: 'Interactive Heatmaps' },
-      { id: 'd', name: 'Granular Policy Targeting' },
     ],
   },
 ];
 
-export function getSectionData(sectionId: string) {
+export function getSectionData(sectionId) {
   return sections.find((section) => section.id === sectionId);
 }
 
-export function getSubsectionData(sectionId: string, subsectionId: string) {
+export function getSubsectionData(sectionId, subsectionId) {
   const section = getSectionData(sectionId);
   if (!section) return undefined;
   return section.subsections.find(

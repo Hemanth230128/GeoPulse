@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 import { Separator } from './ui/separator';
 import { getSectionData } from '@/lib/sections';
 
-export function SidebarNav({ sectionId }: { sectionId: string }) {
+export function SidebarNav({ sectionId }) {
   const pathname = usePathname();
   const section = getSectionData(sectionId);
 

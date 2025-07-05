@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import { ArrowLeft } from 'lucide-react';
 import { getSectionData } from '@/lib/sections';
 
-export default function SectionPage({ params }: { params: { sectionId: string } }) {
+export default function SectionPage({ params }) {
   const section = getSectionData(params.sectionId);
   const sectionTitle = section ? section.title : `Section ${params.sectionId}`;
 

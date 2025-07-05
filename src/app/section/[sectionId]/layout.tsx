@@ -12,9 +12,6 @@ import { getSectionData } from '@/lib/sections';
 export default function SectionLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-  params: { sectionId: string };
 }) {
   const section = getSectionData(params.sectionId);
   const sectionTitle = section ? section.title : `Section ${params.sectionId}`;

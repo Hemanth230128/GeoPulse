@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import { ChevronRight } from 'lucide-react';
 import { getSectionData, getSubsectionData } from '@/lib/sections';
 
-export default function SubsectionPage({ params }: { params: { sectionId: string; subsectionId: string } }) {
+export default function SubsectionPage({ params }) {
   const section = getSectionData(params.sectionId);
   const subsection = getSubsectionData(params.sectionId, params.subsectionId);
 

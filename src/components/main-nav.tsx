@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { sections } from '@/lib/sections';
 
-export function MainNav({ mobile = false }: { mobile?: boolean }) {
+export function MainNav({ mobile = false }) {
   const pathname = usePathname();
 
   const navClass = cn(
