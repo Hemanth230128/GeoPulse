@@ -9,7 +9,7 @@ import {
 export const sections = [
   {
     id: '1',
-    title: 'Population Density vs. Poverty',
+    title: 'Population\nDensity vs.\nPoverty',
     description:
       'Compare MPI, filter trends, and explore regions on an interactive map.',
     href: '/section/1',
@@ -22,7 +22,7 @@ export const sections = [
   },
   {
     id: '2',
-    title: 'Malnutrition & Development',
+    title: 'Malnutrition &\nDevelopment',
     description:
       'Correlate indicators, highlight malnutrition, and segment data with various charts.',
     href: '/section/2',
@@ -35,7 +35,7 @@ export const sections = [
   },
   {
     id: '3',
-    title: 'Urbanization & Migration',
+    title: 'Urbanization &\nMigration',
     description:
       'Analyze migration, identify skill shortages, and compare push/pull factors.',
     href: '/section/3',
@@ -61,15 +61,15 @@ export const sections = [
   },
   {
     id: '5',
-    title: 'Predictive Risk Map',
+    title: 'Predictive Risk\nMap',
     description:
       'Calculate composite risk, forecast future risk zones, and target policy with heatmaps.',
     href: '/section/5',
     Icon: Map,
     subsections: [
-      { id: 'a', name: 'Composite Risk Score' },
-      { id: 'b', name: '2030 Risk Zone Forecast' },
-      { id: 'c', name: 'Interactive Heatmaps' },
+      { id:a: 'Composite Risk Score' },
+      { id:b: '2030 Risk Zone Forecast' },
+      { id:c: 'Interactive Heatmaps' },
     ],
   },
 ];
