@@ -67,9 +67,9 @@ export const sections = [
     href: '/section/5',
     Icon: Map,
     subsections: [
-      { id:a: 'Composite Risk Score' },
-      { id:b: '2030 Risk Zone Forecast' },
-      { id:c: 'Interactive Heatmaps' },
+      { id: 'a', name: 'Composite Risk Score' },
+      { id: 'b', name: '2030 Risk Zone Forecast' },
+      { id: 'c', name: 'Interactive Heatmaps' },
     ],
   },
 ];

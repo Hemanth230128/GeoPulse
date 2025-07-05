@@ -15,9 +15,6 @@ const FeatureCard = ({ feature }) => (
         <CardTitle className="whitespace-pre-wrap text-lg font-bold">
           {feature.title}
         </CardTitle>
-        <CardDescription className="pt-2">
-          {feature.description}
-        </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 items-end justify-center p-6">
         <feature.Icon className="h-12 w-12 text-muted-foreground/60" />
@@ -35,7 +32,7 @@ export default function Home() {
             GeoPulse
           </h1>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-muted-foreground md:text-xl">
-            Actionable insights on impulse, feel the world's true pulse.
+            Actionable insights for a world on the pulse.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
