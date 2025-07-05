@@ -9,7 +9,7 @@ import {
 export const sections = [
   {
     id: '1',
-    title: 'Population\nDensity vs. Poverty',
+    title: 'Population Density vs. Poverty',
     description:
       'Compare MPI, filter trends, and explore regions on an interactive map.',
     href: '/section/1',
@@ -22,7 +22,7 @@ export const sections = [
   },
   {
     id: '2',
-    title: 'Malnutrition &\nDevelopment',
+    title: 'Malnutrition & Development',
     description:
       'Correlate indicators, highlight malnutrition, and segment data with various charts.',
     href: '/section/2',
@@ -35,7 +35,7 @@ export const sections = [
   },
   {
     id: '3',
-    title: 'Urbanization &\nMigration',
+    title: 'Urbanization & Migration',
     description:
       'Analyze migration, identify skill shortages, and compare push/pull factors.',
     href: '/section/3',
@@ -61,7 +61,7 @@ export const sections = [
   },
   {
     id: '5',
-    title: 'Predictive Risk\nMap',
+    title: 'Predictive Risk Map',
     description:
       'Calculate composite risk, forecast future risk zones, and target policy with heatmaps.',
     href: '/section/5',
