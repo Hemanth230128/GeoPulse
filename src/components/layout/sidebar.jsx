@@ -16,7 +16,7 @@ export function Sidebar({ items, sectionTitle }) {
             key={index}
             href={item.href}
             className={cn(
-              'block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ease-in-out',
+              'block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-in-out hover:translate-x-1',
               pathname === item.href
                 ? 'bg-[#4a5f82] text-white'
                 : 'hover:bg-[#3c4d69]'

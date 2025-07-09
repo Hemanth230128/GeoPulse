@@ -54,10 +54,10 @@ export default function Home() {
               key={section.href}
               className="flex"
             >
-              <Card className="w-full text-left shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out hover:-translate-y-1 flex flex-col group p-4 justify-between">
+              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col group p-4 justify-between h-56">
                 <div>
                   <CardHeader className="p-0 mb-2">
-                    <CardTitle className="font-bold text-base leading-tight">{section.title}</CardTitle>
+                    <CardTitle className="font-bold text-base leading-tight text-primary">{section.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="p-0">
                     <p className="text-muted-foreground text-sm">{section.description}</p>
