@@ -54,7 +54,7 @@ export default function Home() {
               key={section.href}
               className="flex"
             >
-              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col group p-4 h-64">
+              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1 flex flex-col group p-4 h-72">
                 <div className="flex-grow">
                   <CardHeader className="p-0 mb-2">
                     <CardTitle className="font-bold text-base leading-tight text-primary">{section.title}</CardTitle>
