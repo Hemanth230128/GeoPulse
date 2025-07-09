@@ -17,7 +17,7 @@ export function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Waves className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block font-headline">Geo Navigator</span>
+            <span className="font-bold sm:inline-block font-headline">GeoPulse</span>
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -27,7 +27,7 @@ export function Header() {
               href={item.href}
               className={cn(
                 'transition-colors hover:text-primary',
-                pathname === item.href ? 'text-primary' : 'text-foreground/60'
+                (pathname.startsWith(item.href) && item.href !== '/') || pathname === item.href ? 'text-primary' : 'text-foreground/60'
               )}
             >
               {item.title}
@@ -46,7 +46,7 @@ export function Header() {
               <div className="flex flex-col space-y-4 pt-6">
                 <Link href="/" className="flex items-center space-x-2 mb-4">
                    <Waves className="h-6 w-6 text-primary" />
-                   <span className="font-bold font-headline">Geo Navigator</span>
+                   <span className="font-bold font-headline">GeoPulse</span>
                 </Link>
                 {navConfig.mainNav.map((item) => (
                   <Link
@@ -54,7 +54,7 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       'text-lg font-medium transition-colors hover:text-primary',
-                       pathname === item.href ? 'text-primary' : 'text-foreground/80'
+                       (pathname.startsWith(item.href) && item.href !== '/') || pathname === item.href ? 'text-primary' : 'text-foreground/80'
                     )}
                   >
                     {item.title}

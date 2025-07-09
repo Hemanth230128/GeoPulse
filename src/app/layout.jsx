@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Header } from "@/components/layout/header";
 
 export const metadata = {
-  title: 'Geo Navigator',
+  title: 'GeoPulse',
   description: 'Simple website for GeoPulse project',
 };
 

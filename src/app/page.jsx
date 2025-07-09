@@ -10,16 +10,16 @@ export default function Home() {
         <div className="flex flex-col items-center space-y-8">
           <div className="space-y-4 max-w-3xl">
             <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl font-headline text-foreground">
-              Geo Navigator
+              GeoPulse
             </h1>
             <p className="text-lg text-muted-foreground md:text-xl">
-              Timeless Geospatial Insights & Solutions.
+              Unlock insights with the planet's true pulse.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Button asChild size="lg">
-              <Link href="/projects">
-                Explore Our Work
+              <Link href="/about">
+                Learn More About Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -31,7 +31,7 @@ export default function Home() {
             width="1200"
             height="600"
             alt="Showcase"
-            data-ai-hint="vintage map classic"
+            data-ai-hint="world map elegant"
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
           />
         </div>
