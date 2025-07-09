@@ -28,7 +28,7 @@ export default function SubsectionPage({ params }) {
         <p>
           This is the page for the "{title}" subsection. The content for this page will be added later. 
           For now, enjoy this placeholder text that describes the purpose of this page within the
-          Geo Navigator application.
+          GeoPulse application.
         </p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

@@ -13,7 +13,7 @@ export default function Home() {
               GeoPulse
             </h1>
             <p className="text-lg text-muted-foreground md:text-xl">
-              Unlock insights with the planet's true pulse.
+              Guiding your impulse with the Earth's true pulse.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
