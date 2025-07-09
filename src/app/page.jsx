@@ -54,8 +54,8 @@ export default function Home() {
               key={section.href}
               className="flex"
             >
-              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col group p-4 justify-between h-56">
-                <div>
+              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col group p-4 h-64">
+                <div className="flex-grow">
                   <CardHeader className="p-0 mb-2">
                     <CardTitle className="font-bold text-base leading-tight text-primary">{section.title}</CardTitle>
                   </CardHeader>
@@ -63,7 +63,7 @@ export default function Home() {
                     <p className="text-muted-foreground text-sm">{section.description}</p>
                   </CardContent>
                 </div>
-                <div className="mt-4 pt-4 flex justify-center items-center">
+                <div className="flex-shrink-0 pt-4 flex justify-center items-center">
                   {section.icon}
                 </div>
               </Card>
