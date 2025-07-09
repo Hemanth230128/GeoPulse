@@ -1,11 +1,5 @@
 export const navConfig = {
-  mainNav: [
-    { title: 'Home', href: '/' },
-    { title: 'About', href: '/about' },
-    { title: 'Services', href: '/services' },
-    { title: 'Projects', href: '/projects' },
-    { title: 'Contact', href: '/contact' },
-  ],
+  mainNav: [],
   sidebarNav: {
     about: [
       { title: 'Our Mission', href: '/about/our-mission' },
@@ -21,6 +15,11 @@ export const navConfig = {
       { title: 'GeoPulse Alpha', href: '/projects/geopulse-alpha' },
       { title: 'DataStream X', href: '/projects/datastream-x' },
       { title: 'ConnectSphere', href: '/projects/connectsphere' },
+    ],
+    data: [
+      { title: 'Data Sources', href: '/data/data-sources' },
+      { title: 'Methodology', href: '/data/methodology' },
+      { title: 'API Access', href: '/data/api-access' },
     ],
     contact: [
       { title: 'Get in Touch', href: '/contact/get-in-touch' },
