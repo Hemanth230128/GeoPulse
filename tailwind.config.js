@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Cormorant Garamond', 'serif'],
         code: ['monospace'],
       },
       colors: {
