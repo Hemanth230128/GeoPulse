@@ -15,13 +15,11 @@ export default function SectionLayout({ children, params }) {
   }
 
   return (
-    <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row gap-8 py-8 md:py-12">
-        <Sidebar items={sidebarNav} sectionTitle={unslugify(section)} />
-        <div className="flex-1 min-w-0">
-          {children}
-        </div>
-      </div>
+    <div className="flex-1 grid grid-cols-1 md:grid-cols-[auto_1fr]">
+      <Sidebar items={sidebarNav} sectionTitle={unslugify(section)} />
+      <main className="flex-1 p-6 sm:p-8 lg:p-10 overflow-y-auto">
+        {children}
+      </main>
     </div>
   );
 }

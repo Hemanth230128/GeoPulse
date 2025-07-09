@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { navConfig } from '@/config/nav';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+import { Card, CardContent } from '@/components/ui/card';
+import { Home, ChevronRight } from 'lucide-react';
 
 function unslugify(slug) {
   return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -11,32 +12,37 @@ export default function SubsectionPage({ params }) {
   const { section, subsection } = params;
   const navSection = navConfig.sidebarNav[section];
 
-  if (!navSection || !navSection.find(item => item.href === `/` + section + `/` + subsection)) {
+  if (!navSection || !navSection.find(item => item.href === `/${section}/${subsection}`)) {
     notFound();
   }
 
   const title = unslugify(subsection);
+  const sectionTitle = unslugify(section);
 
   return (
-    <Card className="shadow-md animate-fade-in">
-      <CardHeader>
-        <p className="text-sm text-muted-foreground capitalize">{unslugify(section)}</p>
-        <CardTitle className="text-3xl">{title}</CardTitle>
-      </CardHeader>
-      <Separator className="mb-6" />
-      <CardContent className="prose max-w-none text-foreground">
-        <p>
-          This is the page for the "{title}" subsection. The content for this page will be added later. 
-          For now, enjoy this placeholder text that describes the purpose of this page within the
-          GeoPulse application.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </CardContent>
-    </Card>
+    <div className="animate-fade-in">
+      <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
+        <Link href="/" className="hover:text-foreground">
+          <Home className="h-4 w-4" />
+        </Link>
+        <ChevronRight className="h-4 w-4" />
+        <Link href={`/${section}`} className="hover:text-foreground">{sectionTitle}</Link>
+        <ChevronRight className="h-4 w-4" />
+        <span className="font-medium text-foreground">{title}</span>
+      </div>
+      <Card className="shadow-lg">
+        <CardContent className="p-6">
+          <h1 className="text-3xl font-bold mb-1">{title}</h1>
+          <p className="text-muted-foreground mb-6">Content for this page will be determined later.</p>
+          
+          <p className="mb-2">This is the dedicated page for {sectionTitle}, {title}.</p>
+          <p className="mb-8">Further details and components for this subsection will be implemented in the future.</p>
+
+          <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
+            <p className="text-muted-foreground">Placeholder Content Area</p>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

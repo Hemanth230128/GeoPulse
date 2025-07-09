@@ -12,9 +12,10 @@ export const navConfig = {
       { title: 'Regional Analysis', href: '/malnutrition-development/regional-analysis' },
     ],
     'urbanization-migration': [
-      { title: 'Migration Patterns', href: '/urbanization-migration/migration-patterns' },
-      { title: 'Skill Shortages', href: '/urbanization-migration/skill-shortages' },
-      { title: 'Push-Pull Factors', href: '/urbanization-migration/push-pull-factors' },
+      { title: 'Migration Analysis', href: '/urbanization-migration/migration-analysis' },
+      { title: 'Skill Shortage Identification', href: '/urbanization-migration/skill-shortage-identification' },
+      { title: 'Push/Pull Factor Comparison', href: '/urbanization-migration/push-pull-factor-comparison' },
+      { title: 'Dynamic Storytelling Charts', href: '/urbanization-migration/dynamic-storytelling-charts' },
     ],
     'inr-depreciation': [
       { title: 'Currency Analysis', href: '/inr-depreciation/currency-analysis' },
