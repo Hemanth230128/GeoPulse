@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardTitle } from '@/components/ui/card';
 import { AreaChart, HeartPulse, ArrowLeftRight, TrendingUp, Map } from 'lucide-react';
 
 const sections = [
@@ -55,13 +55,9 @@ export default function Home() {
               className="flex"
             >
               <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1 flex flex-col group p-4 h-[26rem]">
-                <div className="flex-grow">
-                  <CardHeader className="p-0 mb-2">
-                    <CardTitle className="font-bold text-2xl leading-tight text-primary">{section.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="text-muted-foreground text-sm">{section.description}</p>
-                  </CardContent>
+                <div className="flex-grow flex flex-col space-y-1">
+                  <CardTitle className="font-bold text-2xl leading-tight text-primary">{section.title}</CardTitle>
+                  <p className="text-muted-foreground text-sm">{section.description}</p>
                 </div>
                 <div className="flex-shrink-0 pt-4 flex justify-center items-center">
                   {section.icon}
