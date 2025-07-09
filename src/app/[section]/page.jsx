@@ -1,14 +1,18 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
+function unslugify(slug) {
+  return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 export default function SectionPage({ params }) {
   const { section } = params;
   
-  const title = section.charAt(0).toUpperCase() + section.slice(1);
+  const title = unslugify(section);
 
   return (
     <Card className="shadow-md">
       <CardHeader>
-        <CardTitle className="font-headline text-3xl">Welcome to {title}</CardTitle>
+        <CardTitle className="text-3xl">Welcome to {title}</CardTitle>
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground">

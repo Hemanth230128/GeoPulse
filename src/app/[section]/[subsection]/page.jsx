@@ -9,9 +9,9 @@ function unslugify(slug) {
 
 export default function SubsectionPage({ params }) {
   const { section, subsection } = params;
-  const navItems = navConfig.sidebarNav[section];
+  const navSection = navConfig.sidebarNav[section];
 
-  if (!navItems || !navItems.find(item => item.href === `/`+section+`/`+subsection)) {
+  if (!navSection || !navSection.find(item => item.href === `/` + section + `/` + subsection)) {
     notFound();
   }
 
@@ -21,7 +21,7 @@ export default function SubsectionPage({ params }) {
     <Card className="shadow-md animate-fade-in">
       <CardHeader>
         <p className="text-sm text-muted-foreground capitalize">{unslugify(section)}</p>
-        <CardTitle className="font-headline text-3xl">{title}</CardTitle>
+        <CardTitle className="text-3xl">{title}</CardTitle>
       </CardHeader>
       <Separator className="mb-6" />
       <CardContent className="prose max-w-none text-foreground">

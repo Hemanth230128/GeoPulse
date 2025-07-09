@@ -2,6 +2,10 @@ import { notFound } from 'next/navigation';
 import { navConfig } from '@/config/nav';
 import { Sidebar } from '@/components/layout/sidebar';
 
+function unslugify(slug) {
+  return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 export default function SectionLayout({ children, params }) {
   const { section } = params;
   const sidebarNav = navConfig.sidebarNav[section];
@@ -13,7 +17,7 @@ export default function SectionLayout({ children, params }) {
   return (
     <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row gap-8 py-8 md:py-12">
-        <Sidebar items={sidebarNav} sectionTitle={section} />
+        <Sidebar items={sidebarNav} sectionTitle={unslugify(section)} />
         <div className="flex-1 min-w-0">
           {children}
         </div>

@@ -1,30 +1,30 @@
 export const navConfig = {
   mainNav: [],
   sidebarNav: {
-    about: [
-      { title: 'Our Mission', href: '/about/our-mission' },
-      { title: 'Our Team', href: '/about/our-team' },
-      { title: 'Company History', href: '/about/company-history' },
+    'population-density-vs-poverty': [
+      { title: 'Poverty Maps', href: '/population-density-vs-poverty/poverty-maps' },
+      { title: 'Density Trends', href: '/population-density-vs-poverty/density-trends' },
+      { title: 'Correlations', href: '/population-density-vs-poverty/correlations' },
     ],
-    services: [
-      { title: 'Geospatial Consulting', href: '/services/geospatial-consulting' },
-      { title: 'Data Analysis', href: '/services/data-analysis' },
-      { title: 'Custom Solutions', href: '/services/custom-solutions' },
+    'malnutrition-development': [
+      { title: 'Health Indicators', href: '/malnutrition-development/health-indicators' },
+      { title: 'Data Segmentation', href: '/malnutrition-development/data-segmentation' },
+      { title: 'Regional Analysis', href: '/malnutrition-development/regional-analysis' },
     ],
-    projects: [
-      { title: 'GeoPulse Alpha', href: '/projects/geopulse-alpha' },
-      { title: 'DataStream X', href: '/projects/datastream-x' },
-      { title: 'ConnectSphere', href: '/projects/connectsphere' },
+    'urbanization-migration': [
+      { title: 'Migration Patterns', href: '/urbanization-migration/migration-patterns' },
+      { title: 'Skill Shortages', href: '/urbanization-migration/skill-shortages' },
+      { title: 'Push-Pull Factors', href: '/urbanization-migration/push-pull-factors' },
     ],
-    data: [
-      { title: 'Data Sources', href: '/data/data-sources' },
-      { title: 'Methodology', href: '/data/methodology' },
-      { title: 'API Access', href: '/data/api-access' },
+    'inr-depreciation': [
+      { title: 'Currency Analysis', href: '/inr-depreciation/currency-analysis' },
+      { title: 'Economic Stress', href: '/inr-depreciation/economic-stress' },
+      { title: 'Regional Comparison', href: '/inr-depreciation/regional-comparison' },
     ],
-    contact: [
-      { title: 'Get in Touch', href: '/contact/get-in-touch' },
-      { title: 'Our Locations', href: '/contact/our-locations' },
-      { title: 'Support', href: '/contact/support' },
+    'predictive-risk-map': [
+      { title: 'Composite Risk', href: '/predictive-risk-map/composite-risk' },
+      { title: 'Future Risk Zones', href: '/predictive-risk-map/future-risk-zones' },
+      { title: 'Policy Impact', href: '/predictive-risk-map/policy-impact' },
     ],
   },
 };

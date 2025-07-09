@@ -12,7 +12,7 @@ export function Sidebar({ items, sectionTitle }) {
     <aside className="w-full md:w-64 flex-shrink-0">
       <Card className="shadow-md">
         <CardContent className="p-4">
-          <h2 className="mb-4 text-lg font-semibold capitalize font-headline">{sectionTitle}</h2>
+          <h2 className="mb-4 text-lg font-semibold capitalize">{sectionTitle}</h2>
           <nav className="flex flex-col gap-1">
             {items.map((item, index) => (
               <Link
