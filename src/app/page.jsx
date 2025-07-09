@@ -7,37 +7,37 @@ const sections = [
     title: 'Population Density vs. Poverty',
     href: '/population-density-vs-poverty',
     description: 'Compare MPI, filter trends, and explore regions on an interactive map.',
-    icon: <AreaChart className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />,
+    icon: <AreaChart className="w-12 h-12 text-muted-foreground group-hover:text-primary transition-colors" />,
   },
   {
     title: 'Malnutrition & Development',
     href: '/malnutrition-development',
     description: 'Correlate indicators, highlight malnutrition, and segment data with various charts.',
-    icon: <HeartPulse className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />,
+    icon: <HeartPulse className="w-12 h-12 text-muted-foreground group-hover:text-primary transition-colors" />,
   },
   {
     title: 'Urbanization & Migration',
     href: '/urbanization-migration',
     description: 'Analyze migration, identify skill shortages, and compare push/pull factors.',
-    icon: <ArrowLeftRight className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />,
+    icon: <ArrowLeftRight className="w-12 h-12 text-muted-foreground group-hover:text-primary transition-colors" />,
   },
   {
     title: 'INR Depreciation',
     href: '/inr-depreciation',
     description: 'Visualize currency trends, compare regional data, and correlate with economic stress.',
-    icon: <TrendingUp className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />,
+    icon: <TrendingUp className="w-12 h-12 text-muted-foreground group-hover:text-primary transition-colors" />,
   },
   {
     title: 'Predictive Risk Map',
     href: '/predictive-risk-map',
     description: 'Calculate composite risk, forecast future risk zones, and target policy with heatmaps.',
-    icon: <Map className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />,
+    icon: <Map className="w-12 h-12 text-muted-foreground group-hover:text-primary transition-colors" />,
   },
 ];
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center text-center py-16 sm:py-24">
+    <div className="flex flex-col items-center justify-center text-center py-12 sm:py-20">
       <div className="container px-4 md:px-6">
         <div className="max-w-3xl mx-auto mb-12">
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl text-foreground">
@@ -54,10 +54,10 @@ export default function Home() {
               key={section.href}
               className="flex"
             >
-              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1 flex flex-col group p-4 h-72">
+              <Card className="w-full text-left shadow-md hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1 flex flex-col group p-4 h-96">
                 <div className="flex-grow">
                   <CardHeader className="p-0 mb-2">
-                    <CardTitle className="font-bold text-base leading-tight text-primary">{section.title}</CardTitle>
+                    <CardTitle className="font-bold text-xl leading-tight text-primary">{section.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="p-0">
                     <p className="text-muted-foreground text-sm">{section.description}</p>
