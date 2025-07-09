@@ -1,18 +1,16 @@
-# **App Name**: Geo Navigator
+# **App Name**: Geopulse Navigator
 
 ## Core Features:
 
-- Main Navigation: Homepage navigation bar with 5 main sections: Home, About, Services, Projects, and Contact.
-- Section Pages: Each main section links to a dedicated page with a sidebar containing 3 subsections.
-- Subsection Navigation: Each subsection in the sidebar navigates to a specific content page related to that subsection.
-- Technology Stack: Implemented using Next.js and JavaScript without a database. The site uses client-side routing for all navigation.
-- Visual Hierarchy: Clear visual hierarchy in page layouts.
+- Main Navigation: Generate the main navigation bar with 5 sections on the homepage: Section 1, Section 2, Section 3, Section 4, Section 5.
+- Sidebar Navigation: Create a sidebar on each main section page (1-5), with 3 subsections each: Subsection A, Subsection B, Subsection C.
+- Route Configuration: Set up routes for the home page, 5 main sections, and their respective 15 subsections, and link all navigation elements to these routes.
 
 ## Style Guidelines:
 
-- Primary color: Deep sky blue (#00BFFF), providing a sense of trust and openness, reflects the exploratory nature of "GeoPulse."
-- Background color: Very light cyan (#E0FFFF), offers a clean and unobtrusive backdrop, enhancing the focus on content and navigation.
-- Accent color: Slate blue (#6A5ACD), gives sophisticated highlights on interactive elements like links and buttons.
-- Body and headline font: 'Inter', a sans-serif typeface offering a modern, clean aesthetic suitable for body text.
-- Responsive layout adapting to different screen sizes, with consistent placement of the navigation bar and sidebars.
-- Subtle transitions between page sections to provide a smooth user experience.
+- Primary color: A deep, grounded blue (#34495E) to represent stability and trust.
+- Background color: A light gray (#ECF0F1) to provide a clean, unobtrusive backdrop.
+- Accent color: A vibrant orange (#E67E22) to draw attention to interactive elements.
+- Body and headline font: 'Inter', a sans-serif, for its modern and neutral aesthetic that ensures legibility.
+- Implement a responsive layout that adapts to various screen sizes, maintaining usability on both desktop and mobile devices.
+- Apply subtle transition animations when navigating between pages to enhance the user experience.
