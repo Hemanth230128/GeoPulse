@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
-    "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
-    "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
+    "genkit:dev": "genkit start -- node src/ai/dev.mjs",
+    "genkit:watch": "genkit start -- node --watch src/ai/dev.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "lint": "next lint"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.13.0",
@@ -63,16 +62,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/d3-scale": "^4.0.9",
-    "@types/node": "^20",
-    "@types/papaparse": "^5.3.16",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/react-simple-maps": "^3.0.6",
-    "@types/topojson-client": "^3.1.5",
     "genkit-cli": "^1.13.0",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.1"
   }
 }
