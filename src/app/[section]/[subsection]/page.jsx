@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { navConfig } from '@/config/nav';
 import { Card, CardContent } from '@/components/ui/card';
 import { Home, ChevronRight } from 'lucide-react';
+import Plot4_1 from '@/components/4.1plot';
+import Plot3_1 from '@/components/3.1plot';
+import Plot3_2 from '@/components/3.2plot';
 
 function unslugify(slug) {
   return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -32,15 +35,22 @@ export default function SubsectionPage({ params }) {
       </div>
       <Card className="shadow-lg">
         <CardContent className="p-6">
-          <h1 className="text-3xl font-bold mb-1">{title}</h1>
-          <p className="text-muted-foreground mb-6">Content for this page will be determined later.</p>
-          
-          <p className="mb-2">This is the dedicated page for {sectionTitle}, {title}.</p>
-          <p className="mb-8">Further details and components for this subsection will be implemented in the future.</p>
-
-          <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
-            <p className="text-muted-foreground">Placeholder Content Area</p>
-          </div>
+          <h1 className="text-3xl font-bold text-center mb-3">{title}</h1>
+          {(section === "inr-depreciation" && subsection === "currency-analysis") && (
+            <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
+              <Plot4_1 />
+            </div>
+          )}
+          {(section === "urbanization-migration" && subsection === "migration-analysis") && (
+            <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
+              <Plot3_1 />
+            </div>
+          )}
+          {(section === "urbanization-migration" && subsection === "skill-shortage-identification") && (
+            <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
+              <Plot3_2 />
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
