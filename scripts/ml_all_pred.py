@@ -24,8 +24,8 @@ from sklearn.exceptions      import ConvergenceWarning
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 # ───────────────────────────── 1 ▸ LOAD & CLEAN ──────────────────────────────
-nat  = pd.read_csv("childpop_growth.csv")
-dist = pd.read_csv("combined_2001_2011.csv")
+nat  = pd.read_csv("../data/merged/ind_risk_score.csv")
+dist = pd.read_csv("../data/merged/combined_2001_2011.csv")
 
 # harmonise column names ------------------------------------------------------
 nat = nat.rename(columns={
