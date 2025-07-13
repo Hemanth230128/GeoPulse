@@ -1,42 +1,75 @@
 import pandas as pd
 import numpy as np
-import pyvista as pv
 
-# Load CSV
-df = pd.read_csv("population_vs_poverty.csv")
-df = df.dropna()
-df["Year"] = df["Year"].astype(int)
-df["Country"] = df["Country"].astype(str)
+# Load datasets
+elec = pd.read_csv('cleaned_accesstoelec.csv')
+pop = pd.read_csv('cleaned_population_density.csv')
+gdp = pd.read_csv('GDP_Growth_Filled.csv')
 
-# Create index mapping
-countries = sorted(df["Country"].unique())
-country_to_index = {c: i for i, c in enumerate(countries)}
-df["CountryIndex"] = df["Country"].map(country_to_index)
+# Standardize and rename columns
+elec = elec.rename(columns={
+    'Entity': 'Country',
+    'Code': 'Country Code',
+    'Access to electricity (% of population)': 'accesstoelec'
+})
+pop = pop.rename(columns={
+    'Country': 'Country',
+    'Country Code': 'Country Code',
+    'Population_Density': 'Population_Density'
+})
+# GDP data is in wide format, so melt to long
+gdp_long = gdp.melt(
+    id_vars=['Country Name', 'Country Code', 'Indicator Name'],
+    var_name='Year',
+    value_name='GDP_Growth'
+)
+gdp_long = gdp_long[gdp_long['Indicator Name'] == 'GDP growth (annual %)']
+gdp_long = gdp_long.rename(columns={'Country Name': 'Country'})
+gdp_long['Year'] = gdp_long['Year'].astype(float).astype(int)
 
-# Define grid shape
-x_dim = len(countries)
-y_dim = df["Year"].nunique()
-z_dim = 1  # 2D scalar grid embedded in 3D space
+# Ensure year columns are int for merging
+elec['Year'] = elec['Year'].astype(int)
+pop['Year'] = pop['Year'].astype(float).astype(int)
 
-# Scalar grid (X: country, Y: year)
-scalar_field = np.full((x_dim, y_dim, z_dim), np.nan)
-for _, row in df.iterrows():
-    x = country_to_index[row["Country"]]
-    y = row["Year"] - df["Year"].min()
-    scalar_field[x, y, 0] = row["Share below $2.15 a day"]
+# Merge datasets on Country Code and Year
+df = pd.merge(pop, elec[['Country Code', 'Year', 'accesstoelec']], on=['Country Code', 'Year'], how='inner')
+df = pd.merge(df, gdp_long[['Country', 'Country Code', 'Year', 'GDP_Growth']], on=['Country', 'Country Code', 'Year'], how='left')
 
-# Fill NaN with 0 or interpolate later
-scalar_field = np.nan_to_num(scalar_field)
+# --- Deprivation Functions ---
 
-# Create ImageData (Uniform Grid)
-grid = pv.ImageData()
-grid.dimensions = np.array(scalar_field.shape) + 1
-grid.origin = (0, 0, 0)
-grid.spacing = (1, 1, 1)
+def deprive_elec(x):
+    if pd.isnull(x): return np.nan
+    return 1 - min(max(x, 0), 100) / 100
 
-# Flatten in column-major order (VTK expects Fortran order)
-grid.cell_data["poverty_rate"] = scalar_field.flatten(order="F")
+def deprive_density(x):
+    if pd.isnull(x):
+        return np.nan
+    if x <= 50:
+        return 0
+    elif x >= 300:
+        return 1
+    else:
+        return (x - 50) / (300 - 50)
 
-# Save
-grid.save("poverty_timeseries.vti")
-print("✅ Saved poverty_timeseries.vti")
+
+def deprive_gdp(x):
+    if pd.isnull(x): return np.nan
+    if x <= -2: return 1
+    elif x < 1: return (1 - x) / 3
+    else: return 0
+
+# Apply continuous scaling
+df['deprived_elec'] = df['accesstoelec'].apply(deprive_elec)
+df['deprived_density'] = df['Population_Density'].apply(deprive_density)
+df['deprived_gdp'] = df['GDP_Growth'].apply(deprive_gdp)
+
+# Weighted MPI (equal weights)
+df['MPI'] = (
+    df['deprived_elec'] * (1/3) +
+    df['deprived_density'] * (1/3) +
+    df['deprived_gdp'] * (1/3)
+)
+
+# Select relevant columns and save
+out_cols = ['Country', 'Country Code', 'Year', 'Population_Density', 'accesstoelec', 'GDP_Growth', 'MPI']
+df[out_cols].to_csv('povertyindex.csv', index=False)
