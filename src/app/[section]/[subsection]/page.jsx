@@ -3,13 +3,16 @@ import Link from 'next/link';
 import { navConfig } from '@/config/nav';
 import { Card, CardContent } from '@/components/ui/card';
 import { Home, ChevronRight } from 'lucide-react';
-import Plot4_1 from '@/components/4.1plot';
-import Plot3_1 from '@/components/3.1plot';
-import Plot3_2 from '@/components/3.2plot';
 import Plot1_1 from '@/components/1.1plot';
 import Plot1_2 from '@/components/1.2plot';
 import Plot2_1 from '@/components/2.1plot';
 import Plot2_2 from '@/components/2.2plot';
+import Plot3_1 from '@/components/3.1plot';
+import Plot3_2 from '@/components/3.2plot';
+import Plot4_1 from '@/components/4.1plot';
+import Plot4_2 from '@/components/4.2plot';
+import Plot4_3 from '@/components/4.3plot';
+import Plot4_4 from '@/components/4.4plot';
 
 function unslugify(slug) {
   return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -73,6 +76,21 @@ export default function SubsectionPage({ params }) {
           {(section === "inr-depreciation" && subsection === "currency-analysis") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot4_1 />
+            </div>
+          )}
+          {(section === "inr-depreciation" && subsection === "economic-stress") && (
+            <div className="bg-muted rounded-lg w-full overflow-hidden">
+              <Plot4_2 />
+            </div>
+          )}
+          {(section === "inr-depreciation" && subsection === "regional-comparison") && (
+            <div className="bg-muted rounded-lg w-full overflow-hidden">
+              <Plot4_3 />
+            </div>
+          )}
+          {(section === "inr-depreciation" && subsection === "regional-comparison1") && (
+            <div className="bg-muted rounded-lg w-full overflow-hidden">
+              <Plot4_4 />
             </div>
           )}
           {(section === "predictive-risk-map" && subsection === "composite-risk") && (

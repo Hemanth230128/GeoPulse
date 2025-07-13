@@ -57,8 +57,11 @@ app1.layout = html.Div([
         value=[risk_min, risk_max],
         marks={float(v): str(round(v, 2)) for v in df['Risk_Factor'].quantile([0, 0.25, 0.5, 0.75, 1]).tolist()}
     ),
-    dcc.Graph(id='map1')
-])
+    dcc.Graph(
+        id='map1',
+        style={'height': '80vh', 'width': '100%', 'padding': '0', 'margin': '0'}
+    )
+], style={'height': '100vh', 'margin': '0', 'padding': '0'})
 
 @app1.callback(
     Output('map1', 'figure'),

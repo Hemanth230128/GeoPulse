@@ -45,8 +45,11 @@ app2.layout = html.Div([
         placeholder="Select a State",
         clearable=True
     ),
-    dcc.Graph(id='map2')
-])
+    dcc.Graph(
+        id='map2',
+        style={'height': '90vh', 'width': '100%', 'padding': '0', 'margin': '0'}
+    )
+], style={'height': '100vh', 'margin': '0', 'padding': '0'})
 
 @app2.callback(
     Output('map2', 'figure'),

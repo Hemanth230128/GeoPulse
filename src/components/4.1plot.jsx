@@ -21,7 +21,7 @@ function Plot4_1() {
     return (
         <iframe
             ref={iframeRef}
-            src="/gdp_line_chart.html"
+            src="/correlation_heatmap.html"
             title="HTML Content"
             style={{
                 border: "none",
