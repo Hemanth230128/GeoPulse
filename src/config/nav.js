@@ -22,7 +22,6 @@ export const navConfig = {
     'predictive-risk-map': [
       { title: 'Composite Risk', href: '/predictive-risk-map/composite-risk' },
       { title: 'Future Risk Zones', href: '/predictive-risk-map/future-risk-zones' },
-      { title: 'Policy Impact', href: '/predictive-risk-map/policy-impact' },
     ],
   },
 };

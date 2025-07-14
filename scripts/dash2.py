@@ -38,7 +38,7 @@ q_high = df['Risk_Factor'].quantile(0.95)
 
 app2 = Dash(__name__)
 app2.layout = html.Div([
-    html.H2("State-specific Risk Map Viewer"),
+    html.H2("State-specific Risk Map"),
     dcc.Dropdown(
         id='state-dropdown',
         options=[{'label': s, 'value': s} for s in states],

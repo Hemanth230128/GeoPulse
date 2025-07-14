@@ -3,12 +3,15 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Home, ChevronRight } from 'lucide-react';
 
 function unslugify(slug) {
-  return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  if (!slug) return '';
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 export default function SectionPage({ params }) {
   const { section } = params;
-  
   const title = unslugify(section);
 
   return (
@@ -26,10 +29,21 @@ export default function SectionPage({ params }) {
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            Please select a subsection from the sidebar to view more details. This is the main page for the '{title}' section.
+            Please select a subsection from the sidebar to view more details.
+            This is the main page for the '{title}' section.
           </p>
         </CardContent>
       </Card>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  return [
+    { section: 'population-density-vs-poverty' },
+    { section: 'malnutrition-development' },
+    { section: 'urbanization-migration' },
+    { section: 'inr-depreciation' },
+    { section: 'predictive-risk-map' },
+  ];
 }

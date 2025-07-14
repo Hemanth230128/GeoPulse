@@ -124,3 +124,24 @@ export default function SubsectionPage({ params }) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  return [
+    { section: 'population-density-vs-poverty', subsection: 'poverty-maps' },
+    { section: 'population-density-vs-poverty', subsection: 'density-trends' },
+
+    { section: 'malnutrition-development', subsection: 'health-indicators' },
+    { section: 'malnutrition-development', subsection: 'data-segmentation' },
+
+    { section: 'urbanization-migration', subsection: 'migration-analysis' },
+    { section: 'urbanization-migration', subsection: 'skill-shortage-identification' },
+
+    { section: 'inr-depreciation', subsection: 'currency-analysis' },
+    { section: 'inr-depreciation', subsection: 'economic-stress' },
+    { section: 'inr-depreciation', subsection: 'regional-comparison' },
+    { section: 'inr-depreciation', subsection: 'regional-comparison1' },
+
+    { section: 'predictive-risk-map', subsection: 'composite-risk' },
+    { section: 'predictive-risk-map', subsection: 'future-risk-zones' }
+  ];
+}
