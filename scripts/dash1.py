@@ -10,7 +10,7 @@ import os
 
 # --- Load Data ---
 DATA_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/merged/district_forecast_2025_2030_all_fields.csv'))
-GEO_PATH = '../data/merged/map.geojson'
+GEO_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/merged/map.geojson'))
 df = pd.read_csv(DATA_PATH)
 with open(GEO_PATH, 'r') as f:
     geojson = json.load(f)
