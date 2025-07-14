@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: geopulse-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: out
+    rootDir:
+
+  - type: web
+    name: geopulse-dash
+    env: python
+    buildCommand: pip install -r scripts/requirements.txt
+    startCommand: python scripts/dash1.py
+    rootDir: 

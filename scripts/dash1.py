@@ -211,4 +211,4 @@ def update_map(click_data, reset_clicks, selected_year, risk_range, stored_distr
     return fig, info_style, info_content, new_selected
 
 if __name__ == '__main__':
-    app.run(debug=False, port=8051)
+    app.run(debug=False, host="0.0.0.0", port=8051)
