@@ -3,10 +3,11 @@ import plotly.express as px
 import json
 from dash import Dash, dcc, html, Input, Output
 from district_to_state import district_to_state
+import os
 
 # Load data
-DATA_PATH = '../data/merged/district_forecast_2025_2030_all_fields.csv'
-GEO_PATH = '../data/merged/map.geojson'
+DATA_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/merged/district_forecast_2025_2030_all_fields.csv'))
+GEO_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/merged/map.geojson'))
 df = pd.read_csv(DATA_PATH)
 with open(GEO_PATH, 'r') as f:
     geojson = json.load(f)
@@ -122,5 +123,7 @@ def update_map2(selected_state):
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
     return fig
 
+port = int(os.environ.get("PORT", 8052))
+
 if __name__ == '__main__':
-    app2.run(debug=False, port=8052)
+    app2.run(debug=False, host="0.0.0.0", port=port)
