@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  output: 'export',         // This tells Next to generate static site
+  output: 'export', // Enable static export (replaces deprecated `next export`)
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true, // ✅ Required for 'next/image' in static builds
     remotePatterns: [
       {
         protocol: 'https',
