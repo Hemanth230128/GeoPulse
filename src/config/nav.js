@@ -5,23 +5,23 @@ export const navConfig = {
       { title: 'Low vs High MPI Regions', href: '/poverty-patterns/low-vs-high-mpi-regions' },
       { title: 'Population Density vs MPI', href: '/poverty-patterns/population-density-vs-mpi' },
     ],
-    'malnutrition-development': [
-      { title: 'Health Indicators', href: '/malnutrition-development/health-indicators' },
-      { title: 'Data Segmentation', href: '/malnutrition-development/data-segmentation' },
+    'growth-vs-development': [
+      { title: 'Malnutrition vs GDP Growth', href: '/growth-vs-development/malnutrition-vs-gdp-growth' },
+      { title: 'Tracking Progress', href: '/growth-vs-development/tracking-progress' },
     ],
-    'urbanization-migration': [
-      { title: 'Migration Analysis', href: '/urbanization-migration/migration-analysis' },
-      { title: 'Skill Shortage Identification', href: '/urbanization-migration/skill-shortage-identification' },
+    'urban-growth-and-migration-trends': [
+      { title: 'Urban Drift', href: '/urban-growth-and-migration-trends/urban-drift' },
+      { title: 'Global Migration Flow by Continent', href: '/urban-growth-and-migration-trends/global-miigration-flow-by-continent' },
     ],
-    'inr-depreciation': [
-      { title: 'Currency Analysis', href: '/inr-depreciation/currency-analysis' },
-      { title: 'Economic Stress', href: '/inr-depreciation/economic-stress' },
-      { title: 'Regional Comparison', href: '/inr-depreciation/regional-comparison' },
-      { title: 'Regional Comparison 1', href: '/inr-depreciation/regional-comparison1' },
+    'economic-forces-and-currency-depreciation': [
+      { title: 'Economic Echoes', href: '/economic-forces-and-currency-depreciation/economic-echoes' },
+      { title: 'Depreciation Spread', href: '/economic-forces-and-currency-depreciation/depreciation-spread' },
+      { title: 'South Asian Currency Trends', href: '/economic-forces-and-currency-depreciation/south-asian-currency-trends' },
+      { title: 'Indian Economic Trio', href: '/economic-forces-and-currency-depreciation/indian-economic-trio' },
     ],
-    'predictive-risk-map': [
-      { title: 'Composite Risk', href: '/predictive-risk-map/composite-risk' },
-      { title: 'Future Risk Zones', href: '/predictive-risk-map/future-risk-zones' },
+    'indian-risk-map-forecast': [
+      { title: 'Risk Spotlight', href: '/indian-risk-map-forecast/risk-spotlight' },
+      { title: 'Risk Split', href: '/indian-risk-map-forecast/risk-split' },
     ],
   },
 };

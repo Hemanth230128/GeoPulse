@@ -53,47 +53,47 @@ export default function SubsectionPage({ params }) {
               <Plot1_2 />
             </div>
           )}
-          {(section === "malnutrition-development" && subsection === "health-indicators") && (
+          {(section === "growth-vs-development" && subsection === "malnutrition-vs-gdp-growth") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot2_1 />
             </div>
           )}
-          {(section === "malnutrition-development" && subsection === "data-segmentation") && (
+          {(section === "growth-vs-development" && subsection === "tracking-progress") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot2_2 />
             </div>
           )}
-          {(section === "urbanization-migration" && subsection === "migration-analysis") && (
+          {(section === "urban-growth-and-migration-trends" && subsection === "urban-drift") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot3_1 />
             </div>
           )}
-          {(section === "urbanization-migration" && subsection === "skill-shortage-identification") && (
+          {(section === "urban-growth-and-migration-trends" && subsection === "global-miigration-flow-by-continent") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot3_2 />
             </div>
           )}
-          {(section === "inr-depreciation" && subsection === "currency-analysis") && (
+          {(section === "economic-forces-and-currency-depreciation" && subsection === "economic-echoes") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot4_1 />
             </div>
           )}
-          {(section === "inr-depreciation" && subsection === "economic-stress") && (
+          {(section === "economic-forces-and-currency-depreciation" && subsection === "depreciation-spread") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot4_2 />
             </div>
           )}
-          {(section === "inr-depreciation" && subsection === "regional-comparison") && (
+          {(section === "economic-forces-and-currency-depreciation" && subsection === "south-asian-currency-trends") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot4_3 />
             </div>
           )}
-          {(section === "inr-depreciation" && subsection === "regional-comparison1") && (
+          {(section === "economic-forces-and-currency-depreciation" && subsection === "indian-economic-trio") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot4_4 />
             </div>
           )}
-          {(section === "predictive-risk-map" && subsection === "composite-risk") && (
+          {(section === "indian-risk-map-forecast" && subsection === "risk-spotlight") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <div style={{ width: '100%', height: '800px', margin: '2rem 0' }}>
                 <iframe
@@ -106,7 +106,7 @@ export default function SubsectionPage({ params }) {
               </div>
             </div>
           )}
-          {(section === "predictive-risk-map" && subsection === "future-risk-zones") && (
+          {(section === "indian-risk-map-forecast" && subsection === "risk-split") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <div style={{ width: '100%', height: '800px', margin: '2rem 0' }}>
                 <iframe
@@ -125,23 +125,23 @@ export default function SubsectionPage({ params }) {
   );
 }
 
-export async function generateStaticParams() {
-  return [
-    { section: 'poverty-patterns', subsection: 'poverty-maps' },
-    { section: 'poverty-patterns', subsection: 'density-trends' },
+// export async function generateStaticParams() {
+//   return [
+//     { section: 'poverty-patterns', subsection: 'poverty-maps' },
+//     { section: 'poverty-patterns', subsection: 'density-trends' },
 
-    { section: 'malnutrition-development', subsection: 'health-indicators' },
-    { section: 'malnutrition-development', subsection: 'data-segmentation' },
+//     { section: 'malnutrition-development', subsection: 'health-indicators' },
+//     { section: 'malnutrition-development', subsection: 'data-segmentation' },
 
-    { section: 'urbanization-migration', subsection: 'migration-analysis' },
-    { section: 'urbanization-migration', subsection: 'skill-shortage-identification' },
+//     { section: 'urbanization-migration', subsection: 'migration-analysis' },
+//     { section: 'urbanization-migration', subsection: 'skill-shortage-identification' },
 
-    { section: 'inr-depreciation', subsection: 'currency-analysis' },
-    { section: 'inr-depreciation', subsection: 'economic-stress' },
-    { section: 'inr-depreciation', subsection: 'regional-comparison' },
-    { section: 'inr-depreciation', subsection: 'regional-comparison1' },
+//     { section: 'economic-forces-and-currency-depreciation', subsection: 'currency-analysis' },
+//     { section: 'economic-forces-and-currency-depreciation', subsection: 'economic-stress' },
+//     { section: 'economic-forces-and-currency-depreciation', subsection: 'regional-comparison' },
+//     { section: 'economic-forces-and-currency-depreciation', subsection: 'regional-comparison1' },
 
-    { section: 'predictive-risk-map', subsection: 'composite-risk' },
-    { section: 'predictive-risk-map', subsection: 'future-risk-zones' }
-  ];
-}
+//     { section: 'predictive-risk-map', subsection: 'composite-risk' },
+//     { section: 'predictive-risk-map', subsection: 'future-risk-zones' }
+//   ];
+// }
