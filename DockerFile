@@ -1,20 +1,14 @@
-# Use full Python image with pip
 FROM python:3.11
 
-# Set working directory
 WORKDIR /app
 
-# Copy everything into the container
 COPY . .
 
-# 🔍 Debug: list contents of scripts/ and show requirements.txt
-RUN ls -l scripts && cat scripts/requirements.txt
+RUN apt-get update && apt-get install -y curl && \
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    python get-pip.py && \
+    pip install --no-cache-dir -r scripts/requirements.txt
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r scripts/requirements.txt
-
-# Expose Dash port
 EXPOSE 8000
 
-# Run the Dash app
 CMD ["python", "scripts/dash1.py"]
