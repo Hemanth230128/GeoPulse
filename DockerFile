@@ -1,16 +1,19 @@
-# Use official Python image with pip
-FROM python:3.11-slim
+# Use full Python image with pip
+FROM python:3.11
 
 # Set working directory
 WORKDIR /app
 
-# Copy all project files into the container
+# Copy everything into the container
 COPY . .
+
+# 🔍 Debug: list contents of scripts/ and show requirements.txt
+RUN ls -l scripts && cat scripts/requirements.txt
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r scripts/requirements.txt
 
-# Expose port used by Dash (default 8000)
+# Expose Dash port
 EXPOSE 8000
 
 # Run the Dash app
