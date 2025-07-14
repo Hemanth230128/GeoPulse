@@ -212,5 +212,7 @@ def update_map(click_data, reset_clicks, selected_year, risk_range, stored_distr
 
     return fig, info_style, info_content, new_selected
 
+port = int(os.environ.get("PORT", 8051))
+
 if __name__ == '__main__':
-    app.run(debug=False, host="0.0.0.0", port=8051)
+    app.run(debug=False, host="0.0.0.0", port=port)
