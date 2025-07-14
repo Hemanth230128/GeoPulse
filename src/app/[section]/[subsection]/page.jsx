@@ -97,7 +97,7 @@ export default function SubsectionPage({ params }) {
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <div style={{ width: '100%', height: '800px', margin: '2rem 0' }}>
                 <iframe
-                  src="https://geopulse-backend1.onrender.com/"
+                  src="https://geopulse-dash-backend.up.railway.app/"
                   title="Dash App"
                   width="100%"
                   height="100%"
