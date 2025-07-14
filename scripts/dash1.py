@@ -5,9 +5,11 @@ import dash
 from dash import Dash, dcc, html, Input, Output, State
 from shapely.geometry import shape
 from district_to_state import district_to_state
+import os
+
 
 # --- Load Data ---
-DATA_PATH = '../data/merged/district_forecast_2025_2030_all_fields.csv'
+DATA_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/merged/district_forecast_2025_2030_all_fields.csv'))
 GEO_PATH = '../data/merged/map.geojson'
 df = pd.read_csv(DATA_PATH)
 with open(GEO_PATH, 'r') as f:
