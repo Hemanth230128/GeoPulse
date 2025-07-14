@@ -42,7 +42,7 @@ next-env.d.ts
 
 !data/
 !data/merged/
-!data/merged/district_forecast_2025_2030_all_fields.csv
+!data/merged/*
 
 # firebase
 firebase-debug.log
