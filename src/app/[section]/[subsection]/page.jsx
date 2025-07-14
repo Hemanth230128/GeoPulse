@@ -74,7 +74,7 @@ export default function SubsectionPage({ params }) {
             </div>
           )}
           {(section === "economic-forces-and-currency-depreciation" && subsection === "economic-echoes") && (
-            <div className="bg-muted rounded-lg w-full overflow-hidden">
+            <div className="bg-muted rounded-lg w-full overflow-hidden flex justify-center">
               <Plot4_1 />
             </div>
           )}

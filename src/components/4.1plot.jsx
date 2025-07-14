@@ -25,9 +25,10 @@ function Plot4_1() {
             title="HTML Content"
             style={{
                 border: "none",
-                width: "100%",
+                width: "60%",
                 height,
                 transition: "height 0.3s ease",
+                justify: "center",
             }}
         />
     );
