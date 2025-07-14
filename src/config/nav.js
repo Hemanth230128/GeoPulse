@@ -1,9 +1,9 @@
 export const navConfig = {
   mainNav: [],
   sidebarNav: {
-    'population-density-vs-poverty': [
-      { title: 'Poverty Maps', href: '/population-density-vs-poverty/poverty-maps' },
-      { title: 'Density Trends', href: '/population-density-vs-poverty/density-trends' },
+    'poverty-patterns': [
+      { title: 'Low vs High MPI Regions', href: '/poverty-patterns/low-vs-high-mpi-regions' },
+      { title: 'Population Density vs MPI', href: '/poverty-patterns/population-density-vs-mpi' },
     ],
     'malnutrition-development': [
       { title: 'Health Indicators', href: '/malnutrition-development/health-indicators' },

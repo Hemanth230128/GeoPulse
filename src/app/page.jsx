@@ -4,8 +4,8 @@ import { AreaChart, HeartPulse, ArrowLeftRight, TrendingUp, Map } from 'lucide-r
 
 const sections = [
   {
-    title: 'Population Density vs. Poverty',
-    href: '/population-density-vs-poverty',
+    title: 'Poverty Patterns',
+    href: '/poverty-patterns',
     description: 'Compare MPI, filter trends, and explore regions on an interactive map.',
     icon: <AreaChart className="w-14 h-14 text-primary/30 group-hover:text-primary transition-colors duration-300" />,
   },

@@ -43,12 +43,12 @@ export default function SubsectionPage({ params }) {
       <Card className="shadow-lg">
         <CardContent className="p-6">
           <h1 className="text-3xl font-bold text-center mb-3">{title}</h1>
-          {(section === "population-density-vs-poverty" && subsection === "poverty-maps") && (
+          {(section === "poverty-patterns" && subsection === "low-vs-high-mpi-regions") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot1_1 />
             </div>
           )}
-          {(section === "population-density-vs-poverty" && subsection === "density-trends") && (
+          {(section === "poverty-patterns" && subsection === "population-density-vs-mpi") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot1_2 />
             </div>
@@ -127,8 +127,8 @@ export default function SubsectionPage({ params }) {
 
 export async function generateStaticParams() {
   return [
-    { section: 'population-density-vs-poverty', subsection: 'poverty-maps' },
-    { section: 'population-density-vs-poverty', subsection: 'density-trends' },
+    { section: 'poverty-patterns', subsection: 'poverty-maps' },
+    { section: 'poverty-patterns', subsection: 'density-trends' },
 
     { section: 'malnutrition-development', subsection: 'health-indicators' },
     { section: 'malnutrition-development', subsection: 'data-segmentation' },
