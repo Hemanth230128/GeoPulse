@@ -43,7 +43,7 @@ export default function SubsectionPage({ params }) {
       <Card className="shadow-lg">
         <CardContent className="p-6">
           <h1 className="text-3xl font-bold text-center mb-3">{title}</h1>
-          {(section === "poverty-patterns" && subsection === "low-vs-high-mpi-regions") && (
+          {(section === "poverty-patterns" && subsection === "low-density-with-high-mpi-regions") && (
             <div className="bg-muted rounded-lg w-full overflow-hidden">
               <Plot1_1 />
             </div>

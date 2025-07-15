@@ -2,7 +2,7 @@ export const navConfig = {
   mainNav: [],
   sidebarNav: {
     'poverty-patterns': [
-      { title: 'Low vs High MPI Regions', href: '/poverty-patterns/low-vs-high-mpi-regions' },
+      { title: 'Low Density with High MPI Regions', href: '/poverty-patterns/low-density-with-high-mpi-regions' },
       { title: 'Population Density vs MPI', href: '/poverty-patterns/population-density-vs-mpi' },
     ],
     'growth-vs-development': [
