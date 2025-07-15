@@ -21,7 +21,7 @@ function Plot1_1() {
     return (
         <iframe
             ref={iframeRef}
-            src="/choropleth_mpi_density_ratio_top10.html"
+            src="/choropleth_mpi_density_ratio_top10_last.html"
             title="HTML Content"
             style={{
                 border: "none",
