@@ -21,7 +21,7 @@ function Plot2_1() {
     return (
         <iframe
             ref={iframeRef}
-            src="/bubble_chart.html"
+            src="/bubble_chart_final.html"
             title="HTML Content"
             style={{
                 border: "none",

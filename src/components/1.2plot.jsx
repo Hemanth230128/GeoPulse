@@ -20,7 +20,7 @@ function Plot1_2() {
     return (
         <iframe
             ref={iframeRef}
-            src="/scatter_pop_mpi_slider.html"
+            src="/scatter_mpi_pop.html"
             title="HTML Content"
             style={{
                 border: "none",

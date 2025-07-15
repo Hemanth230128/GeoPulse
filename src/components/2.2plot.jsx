@@ -21,7 +21,7 @@ function Plot2_2() {
     return (
         <iframe
             ref={iframeRef}
-            src="/country_line_chart.html"
+            src="/country_line_chart_final.html"
             title="HTML Content"
             style={{
                 border: "none",
